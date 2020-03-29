@@ -16,7 +16,7 @@ LOCAL_SHARED_LIBRARIES := \
 
 # Temporary hack for broken vendor RILs.
 LOCAL_WHOLE_STATIC_LIBRARIES := \
-	librilutils_static
+	librilutils
 
 LOCAL_CFLAGS := -DRIL_SHLIB
 LOCAL_CFLAGS += -Wall -Wextra -Werror
@@ -29,7 +29,6 @@ endif
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE:= rild
-
 ifeq ($(PRODUCT_COMPATIBLE_PROPERTY),true)
 LOCAL_INIT_RC := rild.rc
 LOCAL_CFLAGS += -DPRODUCT_COMPATIBLE_PROPERTY
